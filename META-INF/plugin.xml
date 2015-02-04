@@ -8,6 +8,7 @@
 	</vendor>
 
 	<description><![CDATA[
+		Imported Maven project will be named after the directory.
     ]]></description>
 
 	<change-notes><![CDATA[
@@ -24,16 +25,15 @@
 	  -->
 
 	<extensions defaultExtensionNs="com.intellij">
-		<projectImportProvider order="first" implementation="krasa.importedMavenProjectRenamer.MyMavenProjectImportProvider" />
-		<projectOpenProcessor order="first" implementation="krasa.importedMavenProjectRenamer.MyMavenProjectOpenProcessor" />
-		<projectImportBuilder order="first" implementation="krasa.importedMavenProjectRenamer.MyMavenProjectBuilder" />
-
 
 		<!-- Add your extensions here -->
 	</extensions>
 
 	<application-components>
 		<!-- Add your application components here -->
+		<component>
+			<implementation-class>krasa.importedMavenProjectRenamer.ImportedMavenProjectRenamerAppComponent</implementation-class>
+		</component>
 	</application-components>
 
 	<project-components>
