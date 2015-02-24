@@ -36,12 +36,12 @@ public class MyMavenProjectBuilder extends MavenProjectBuilder {
 		if (parentName != null) {
 			return parentName;
 		} else if (root != null) {
-            String name = root.getName();
-            if (!name.contains("_") && root.getParent().getName().contains("_")) {
-                name = root.getParent().getName();
-            }
-            return name;
-        }
-        return super.getSuggestedProjectName();
+			String name = root.getName();
+			if (!name.contains("_") && root.getParent().getName().contains("_")) {
+				name = root.getParent().getName();
+			}
+			return name;
+		}
+		return super.getSuggestedProjectName();
 	}
 }
